@@ -11,18 +11,18 @@ public class BestPip : MonoBehaviour
     public GameObject PipPrefab;
     float x, y;
     Rigidbody2D rb;
-    Vector2 maxspeed = new Vector2(5, 5);
+    Vector2 maxspeed = new Vector2(3, 3);
     public List<Vector2> moveSet = new List<Vector2>();
 
-
-    
 
     // Start is called before the first frame update
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody2D>();
-        createMoveSet();
-        
+        if (moveSet.Count == 0)
+        {
+            createMoveSet();
+        }        
     }
 
     // Update is called once per frame
@@ -54,8 +54,6 @@ public class BestPip : MonoBehaviour
 
     void createMoveSet()
     {
-        if (moveSet.Count == 0)
-        {
             for (int i = lifespan; i >= 0; i--)
             {
                 x = Random.Range(-0.75f, 0.75f);
@@ -63,7 +61,12 @@ public class BestPip : MonoBehaviour
 
                 moveSet.Add(new Vector2(x, y));
             }
-       }
+     
+    }
+
+    public List<Vector2> returnMoveSet()
+    {
+        return this.moveSet;
     }
 
     void OnTriggerEnter2D(Collider2D collision)

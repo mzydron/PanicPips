@@ -253,12 +253,12 @@ PrefabInstance:
     - target: {fileID: 6854406110241825843, guid: d3bf29e30811fb14fa526c632dc9dd5f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.94
+      value: -21.77
       objectReference: {fileID: 0}
     - target: {fileID: 6854406110241825843, guid: d3bf29e30811fb14fa526c632dc9dd5f,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.67
+      value: 9.68
       objectReference: {fileID: 0}
     - target: {fileID: 6854406110241825843, guid: d3bf29e30811fb14fa526c632dc9dd5f,
         type: 3}
@@ -367,6 +367,7 @@ MonoBehaviour:
     type: 3}
   sv: {x: 0, y: 0}
   maxPips: 300
+  maxLifespan: 1000
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
